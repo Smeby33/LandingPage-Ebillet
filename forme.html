@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div0">
+        <div class="div1">
+            <div class="div1before"></div>
+        </div>
+    </div>
+    <div class="carré">
+        <div class="line1">
+            <div class="cercle">
+                <p>Marland est magnifique</p>
+            </div>
+        </div>
+        <!-- <div class="line2">
+                <div class="cercle1">
+                    <p>Jus d'orange est adorable</p>
+                </div>
+                <div class="cercle2">
+                    <p>Soleil est rayonante</p>
+                </div>
+         </div>
+          <div class="ligne3">
+             <div class="cercle3">
+                <p>Naicka est aimable</p>
+             </div>
+          </div> -->
+    </div>
+
+    <style>
+        body{
+            background: #da4545;
+            display: flex;
+            justify-content: space-between;
+        }
+        .div1{
+            position: absolute;
+            height: 10em;
+            width: 9em;
+            border-radius: 15px;
+            background-color: white;
+        }
+        .div1before{
+            content: '';
+            float: right;            
+            height: 0;
+            width: 0;
+            border-bottom: 4.80em solid rgb(255, 255, 255);
+            border-right: 6.80em solid transparent;
+            border-top-right-radius: 15px;
+            border-radius: 0px 15px 0px 0px ;
+            background-color: blue;
+            background-image: url();
+            transition:height 2s,width 2s,border-bottom 2s,border-right 2s,border-raduis 2s, background-image2s;
+        }
+        .div1before:hover{
+            height: 10em;
+            width: 9em;
+            border-bottom:0em ;
+            border-right:0em;
+            border-radius:15px;
+            background-image: url(qr_iphone-removebg-preview.png);
+        }
+        .carré{
+            height: 500px;
+            width: 500px;
+            background-color: blue;
+            display: flex;
+            justify-content:end;
+        }
+        .cercle{
+            height: 110px;
+            width: 110px;
+            border-radius: 80%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: heigth 1s,width 2s,background-color 2s,border-raduis 4s ;
+        }
+        .cercle:hover {
+            height: 500px;
+            width: 500px;
+            border-radius: 0px;
+            background-color: #ff02dd;
+        }
+        .cercle1{
+            height: 110px;
+            width: 110px;
+            border-radius: 80%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: heigth 1s,width 2s,background-color 2s ;
+        }
+        .cercle1:hover {
+            height: 200px;
+            width: 200px;
+            background-color: #eef105;
+        }    .cercle2{
+            height: 110px;
+            width: 110px;
+            border-radius: 80%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: heigth 1s,width 2s,background-color 2s ;
+        }
+        .cercle2:hover {
+            height: 200px;
+            width: 200px;
+            background-color: #1256bd;
+        }
+        .cercle3{
+            height: 110px;
+            width: 110px;
+            border-radius: 80%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: heigth 1s,width 2s,background-color 2s ;
+        }
+        .cercle3:hover {
+            height: 200px;
+            width: 200px;
+            background-color: #ff0239;
+        }
+    </style>
+    <div class="container">
+        <div class="arrow"></div>
+        <p class="text">Scannez le code QR pour ajouter ce site à votre iPhone.</p>
+      </div>
+      <style>
+      .container {
+        position: relative; /* Required for absolute positioning of arrow */
+      }
+      
+      .arrow {
+        position: absolute; /* Position arrow inside container */
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%); /* Center vertically */
+        content: '';
+        float: right;
+        height: 0;
+        width: 0;
+        border-bottom: 4.80em solid rgb(255, 255, 255);
+        border-right: 6.80em solid transparent;
+        border-top-right-radius: 15px;
+        border-radius: 0px 15px 0px 0px;
+        background-color: blue;
+        transition: height 2s, width 2s, border-bottom 2s, border-right 2s, border-radius 2s;
+      }
+      
+      .arrow:hover {
+        height: 10em;
+        width: 9em;
+        border-bottom: 0em;
+        border-right: 0em;
+        border-radius: 15px;
+        background-image: url(qr_iphone-removebg-preview.png);
+      }
+      
+      .text {
+        position: absolute; /* Position text inside container */
+        top: 50%;
+        left: 10px; /* Adjust left padding if needed */
+        transform: translateY(-50%); /* Center vertically */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 2s ease-in-out; /* Adjust transition properties as desired */
+      }
+      
+      .arrow:hover + .text { /* Show text on arrow hover */
+        opacity: 1;
+      }
+    </style>
+</body>
+</html>
